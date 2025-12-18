@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int t[20], d[20], h, i, j, n, temp, k, atr[20], p, sum = 0;
+
+    printf("enter the no of tracks to be traversed: ");
+    scanf("%d", &n);   /* FIXED scanf */
+
+    printf("enter the position of head: ");
+    scanf("%d", &h);
+
+    t[0] = 0;
+    t[1] = h;
+
+    printf("enter the tracks:\n");
+    for(i = 2; i < n + 2; i++)
+        scanf("%d", &t[i]);
+
+    /* Sorting */
+    for(i = 0; i < n + 2; i++)
+    {
+        for(j = 0; j < (n + 2) - i - 1; j++)
+        {
+            if(t[j] > t[j + 1])
+            {
+                temp = t[j];
+                t[j] = t[j + 1];
+                t[j + 1] = temp;
+            }
+        }
+    }
+
+    /* Find head position */
+    for(i = 0; i < n + 2; i++)
+        if(t[i] == h)
+            break;
+
+    j = i;
+    k = j;
+    p = 0;
+
+    /* Move left */
+    while(t[j] != 0)
+    {
+        atr[p++] = t[j--];
+    }
+    atr[p++] = t[j];
+
+    /* Move right */
+    for(i = k + 1; i < n + 2; i++)
+        atr[p++] = t[i];
+
+    printf("\nTracks Traversed:\n");
+    for(i = 0; i < p; i++)
+        printf("%d\n", atr[i]);
+
+    printf("\nDifference Between tracks:\n");
+    for(j = 0; j < p - 1; j++)
+    {
+        if(atr[j] > atr[j + 1])
+            d[j] = atr[j] - atr[j + 1];
+        else
+            d[j] = atr[j + 1] - atr[j];
+
+        sum += d[j];
+        printf("%d\n", d[j]);
+    }
+
+    printf("\nAverage header movements: %f", (float)sum / n);
+
+}
