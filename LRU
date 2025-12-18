@@ -59,3 +59,44 @@ void main()
     }
     printf("\nThe number of page faults using LRU are %d", pf);
 }
+
+
+
+
+        **OUTPUT**
+Enter the length of reference string -- 15
+Enter the reference string -- 7
+0
+1
+2
+0
+3
+0
+4
+2
+3
+0
+3
+1
+2
+0
+Enter the number of frames -- 3
+
+The Page Replacement process is --
+7       -1      -1      PF No. -- 1
+7       0       -1      PF No. -- 2
+7       0       1       PF No. -- 3
+2       0       1       PF No. -- 4
+2       0       1
+2       0       3       PF No. -- 5
+2       0       3
+4       0       3       PF No. -- 6
+4       0       2       PF No. -- 7
+4       3       2       PF No. -- 8
+0       3       2       PF No. -- 9
+0       3       2
+0       3       1       PF No. -- 10
+2       3       1       PF No. -- 11
+2       0       1       PF No. -- 12
+
+The number of page faults using LRU are 12
