@@ -71,3 +71,21 @@ void main()
     printf("\nAverage header movements: %f", (float)sum / n);
 
 }
+
+
+output
+INPUT 
+Enter no.of tracks:9  
+Enter track position:55 58 60 70 18 90 150 160 184  
+OUTPUT: 
+Tracks Traversed   Difference Between tracks 
+                    
+150                 50
+160                 10 
+184                  24 
+90                   94 
+70                  20 
+60                  10 
+58                  2 
+55                  3 
+18                 37
