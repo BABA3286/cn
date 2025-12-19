@@ -34,3 +34,26 @@ void main()
             printf("%d, ", ft[i].sb + j);
     }
 }
+
+
+
+output
+INPUT: Enter no of files :3 
+
+Enter file name 1 :A  
+Enter starting block of file 1 :85  
+Enter no of blocks in file 1 :6  
+
+Enter file name 2 :B  
+Enter starting block of file 2 :102 
+Enter no of blocks in file 2 :4  
+
+Enter file name 3 :C  
+Enter starting block of file 3 :60  
+Enter no of blocks in file 3 :4  
+
+Enter the file name to be searched -- B  
+OUTPUT:  
+FILE NAME     START BLOCK    NO OF BLOCKS      blocks occupied  
+B               102            4                102 103 104 105
+
