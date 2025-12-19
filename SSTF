@@ -42,3 +42,13 @@ int main()
     printf("\nAverage Seek Time is %f\t", avg);
     return 0;
 }
+
+
+output
+OUTPUT: 
+*** SSTF Disk Scheduling Algorithm *** 
+Enter the size of Queue 5 
+Enter the Queue 10 17 2 15 4 
+Enter the initial head position 3 
+Total Seek Time is14 
+Average Seek Time is 2.800000
